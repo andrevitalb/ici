@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+		"dev": "yarn start:dev",
+		"build": "next build",
+		"start": "next start",
+		"start:dev": "concurrently -k \"next dev -p $(grep '^PORT=' <.env.development | cut -d= -f2)\"",
+		"typecheck": "echo frontend && tsc --pretty",
+		"typecheck:watch": "yarn typecheck --watch",
+		"lint": "eslint --cache --ext .ts,.tsx ."
   },
   "dependencies": {
     "@next/font": "13.1.6",
