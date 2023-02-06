@@ -1,24 +1,30 @@
-# node
-node_modules/
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# logs
-logs
-*.log
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.log/
 
-# dotenv
-.env
+# some env files
+.env*.local
+.env.production
 
-# typescript
-ignored/
-*.tsbuildinfo
-
-# eslint
-.eslintcache
-
-# local editors
-.vscode
-.DS_Store
+# unneeded local/deprecated files
+/public/images/portfolio
+/services
