@@ -63,5 +63,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("@tailwindcss/typography", "@tailwindcss/custom-forms")],
+	plugins: [require("@tailwindcss/typography")],
 }
