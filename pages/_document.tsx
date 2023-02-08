@@ -38,7 +38,13 @@ export default class CustomDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<link rel="canonical" href="https://www.andrevital.com/" />
+					<meta charSet="utf-8" />
+					<meta
+						name="viewport"
+						content="width=device-width, initial-scale=1, maximum-scale=1"
+					/>
+
+					<link rel="icon" href="/favicon.ico" />
 
 					{/* Google Fonts */}
 					<link rel="preconnect" href="https://fonts.googleapis.com" />

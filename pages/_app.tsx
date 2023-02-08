@@ -10,9 +10,9 @@ export default function App<Props extends JSX.IntrinsicAttributes>({
 	pageProps: Props
 }) {
 	return (
-    <>
+		<>
 			<GlobalStyles />
 			<Component {...pageProps} />
-      </>
+		</>
 	)
 }
