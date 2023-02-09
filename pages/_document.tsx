@@ -1,9 +1,9 @@
 import Document, {
-  DocumentContext,
-  Head,
-  Html,
-  Main,
-  NextScript
+	DocumentContext,
+	Head,
+	Html,
+	Main,
+	NextScript,
 } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
@@ -38,20 +38,17 @@ export default class CustomDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<link rel="canonical" href="https://www.andrevital.com/" />
+					<meta charSet="utf-8" />
+					<meta
+						name="viewport"
+						content="width=device-width, initial-scale=1, maximum-scale=1"
+					/>
 
-					{/* FontAwesome */}
-					<link rel="stylesheet" href="/css/all.min.css" />
+					<link rel="icon" href="/favicon.ico" />
 
 					{/* Google Fonts */}
-					<link
-						rel="preconnect"
-						href="https://fonts.googleapis.com"
-					/>
-					<link
-						rel="preconnect"
-						href="https://fonts.gstatic.com"
-					/>
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
+					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
 						href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
 						rel="stylesheet"

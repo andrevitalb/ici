@@ -1,12 +1,17 @@
 import { initializeApp } from "firebase/app"
+import { getAuth } from "firebase/auth"
+import { getFirestore } from "firebase/firestore"
+import env from "lib/env"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB4rjeoyHBCYnm_4twiS40HAYaTyeGgOGs",
-  authDomain: "ici-uaa.firebaseapp.com",
-  projectId: "ici-uaa",
-  storageBucket: "ici-uaa.appspot.com",
-  messagingSenderId: "297291359425",
-  appId: "1:297291359425:web:fb2684ab12a3aa8c032040"
+	apiKey: env.firebaseApiKey,
+	authDomain: env.firebaseAuthDomain,
+	projectId: env.firebaseProjectId,
+	storageBucket: env.firebaseStorageBucket,
+	messagingSenderId: env.firebaseMessagingSenderId,
+	appId: env.firebaseAppId,
 }
 
-export const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig)
+export const db = getFirestore(app)
+export const auth = getAuth(app)
