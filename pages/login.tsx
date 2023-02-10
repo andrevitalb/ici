@@ -1,3 +1,5 @@
+import LoginWrapper from "components/auth/LoginWrapper"
+import { Page, PageContentWrapper } from "components/common/layout/layout.atoms"
 import Head from "next/head"
 
 const Login = () => {
@@ -5,8 +7,16 @@ const Login = () => {
 		<div>
 			<Head>
 				<title>Login | ICI</title>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1, maximum-scale=1"
+				/>
 			</Head>
-			<div></div>
+			<Page>
+				<PageContentWrapper>
+					<LoginWrapper />
+				</PageContentWrapper>
+			</Page>
 		</div>
 	)
 }
