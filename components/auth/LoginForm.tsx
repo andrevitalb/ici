@@ -6,6 +6,7 @@ import {
 	TextField,
 } from "components/common/fields"
 import { Form, Formik } from "formik"
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
 import * as Yup from "yup"
 
 const emailError = "Proporcione un correo válido"
@@ -22,8 +23,16 @@ const initialValues = {
 }
 
 const LoginForm = () => {
-	const handleSubmit = (values: Values) => {
-		console.log(values)
+	const auth = getAuth()
+
+	const handleSubmit = async ({ email, password }: Values) => {
+		const userCredentials = await signInWithEmailAndPassword(
+			auth,
+			email,
+			password,
+		)
+
+		console.log(userCredentials)
 	}
 
 	return (
@@ -41,14 +50,14 @@ const LoginForm = () => {
 								<FieldWrapper name="email">
 									<FieldLabel>
 										Email
-										<TextField name="email" tw="w-full"></TextField>
+										<TextField name="email" tw="w-full" />
 										<FieldError>{errors.email}</FieldError>
 									</FieldLabel>
 								</FieldWrapper>
 								<FieldWrapper name="password">
 									<FieldLabel>
 										Contraseña
-										<TextField name="password" tw="w-full"></TextField>
+										<TextField name="password" type="password" tw="w-full" />
 										<FieldError>{errors.password}</FieldError>
 									</FieldLabel>
 								</FieldWrapper>
