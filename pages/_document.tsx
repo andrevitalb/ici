@@ -39,10 +39,6 @@ export default class CustomDocument extends Document {
 			<Html>
 				<Head>
 					<meta charSet="utf-8" />
-					<meta
-						name="viewport"
-						content="width=device-width, initial-scale=1, maximum-scale=1"
-					/>
 
 					<link rel="icon" href="/favicon.ico" />
 
@@ -50,7 +46,7 @@ export default class CustomDocument extends Document {
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
-						href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+						href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&family=Lato:wght@400;700&display=swap"
 						rel="stylesheet"
 					/>
 				</Head>
